@@ -26,10 +26,13 @@ def getInfo():
     
     return returnedInfo
 
+# Sends the info to the page
+# PRECONDITION: data (the data from a json file)
+# POSTCONDITION: None
 def sendInfo(data):
     response = requests.post(url = "https://postcard-navy.vercel.app/api/survey", json={'key':data})
     returnedInfo = response.json()
-    return returnedInfo
+    print(returnedInfo)
 
 #print(getInfo())
-#print(sendInfo("y"))
+sendInfo("y")
