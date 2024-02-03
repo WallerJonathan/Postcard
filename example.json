@@ -1,0 +1,24 @@
+{
+    "planData": [
+        {
+            
+        }
+    ]
+    "responses": [
+      {
+        "questionId": 1,
+        "text": "Choose your preferred accommodations:",
+        "answer": ["Luxury", "Villa"]
+      },
+      {
+        "questionId": 2,
+        "text": "Do you have any dietary restrictions?",
+        "answer": ["Vegetarian", "Allergies"]
+      },
+      {
+        "questionId": 3,
+        "text": "What are your interests?",
+        "answer": ["Museums", "Beaches", "Live Music", "Cafe"]
+      }
+    ]
+  }
