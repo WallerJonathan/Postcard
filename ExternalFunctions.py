@@ -18,3 +18,22 @@ def makeJson(myDict, filePath):
 def shuffleList(L):
     random.shuffle(L)
 
+# pre-conditions: takes in a list
+# post-conditions: 
+# This function shuffles each sublist to randomize the order of elements, 
+# and then splits these shuffled sublists into new sublists, each containing exactly three elements. 
+# The function accumulates these groups of three into a new sublist for each original sublist, 
+# and appends these new sublists to the resultList. The function returns resultList, which is a list of lists of lists, 
+# where each inner-most list contains exactly three elements.
+def randomSplitIntoDays(L):
+    resultList = []
+    for sublist in L:
+        random.shuffle(sublist)
+        newSubList = []
+        while len(sublist) >= 3:  # As long as there are at least 3 elements
+            tempSubList = sublist[:3]  # Take the first 3 elements
+            newSubList.append(tempSubList)
+            sublist = sublist[3:]  # Update the sublist excluding the first 3 elements
+        resultList.append(newSubList)
+    return resultList
+
