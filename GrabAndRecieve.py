@@ -1,8 +1,5 @@
 import requests
 import json
-from fastapi import FastAPI, Request, UploadFile, Body, Cookie, File, Form, Header, Path, Query
-
-app = FastAPI() # Probably won't use
 
 # Gets the info from the page
 # PRECONDITION: Nothing
@@ -35,4 +32,4 @@ def sendInfo(data):
     print(returnedInfo)
 
 #print(getInfo())
-sendInfo("y")
+#sendInfo("nuuu")
