@@ -2,6 +2,7 @@
 import requests
 import json
 from ExternalFunctions import *
+from GrabAndRecieve import *
 
 # Open the data file from the user's answers
 file = open('example.json')
