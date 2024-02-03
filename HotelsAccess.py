@@ -63,18 +63,21 @@ hotelResponse = requests.get(url=hotelSearchURL, params=hotelSearchParams,
 # print(f"JSON data has been written to {filename}")
 
 # Each hotel variable contains the hotel name(str), customer rating out of 5(float),
-# price per day(str) and total price incl. of taxes(str) 
+# price per day(str) and total price incl. of taxes(str), and url of the pic(str) 
 hotel1 = [hotelResponse["properties"][0]["name"], 
           hotelResponse["properties"][0]["reviews"]["score"]/2, 
           hotelResponse["properties"][0]["price"]["options"][0]["formattedDisplayPrice"], 
-          hotelResponse["properties"][0]["price"]["displayMessages"][1]["lineItems"][0]["value"]]
+          hotelResponse["properties"][0]["price"]["displayMessages"][1]["lineItems"][0]["value"],
+          hotelResponse["properties"][0]["propertyImage"]["image"]["url"]]
 hotel2 = [hotelResponse["properties"][1]["name"], 
           hotelResponse["properties"][1]["reviews"]["score"]/2, 
           hotelResponse["properties"][1]["price"]["options"][0]["formattedDisplayPrice"], 
-          hotelResponse["properties"][1]["price"]["displayMessages"][1]["lineItems"][0]["value"]]
+          hotelResponse["properties"][1]["price"]["displayMessages"][1]["lineItems"][0]["value"],
+          hotelResponse["properties"][1]["propertyImage"]["image"]["url"]]
 hotel3 = [hotelResponse["properties"][2]["name"], 
           hotelResponse["properties"][2]["reviews"]["score"]/2, 
           hotelResponse["properties"][2]["price"]["options"][0]["formattedDisplayPrice"], 
-          hotelResponse["properties"][2]["price"]["displayMessages"][1]["lineItems"][0]["value"]]
+          hotelResponse["properties"][2]["price"]["displayMessages"][1]["lineItems"][0]["value"],
+          hotelResponse["properties"][2]["propertyImage"]["image"]["url"]]
 hotelsList = [hotel1, hotel2, hotel3]
 # print(hotelsList) # debugger
