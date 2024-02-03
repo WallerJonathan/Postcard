@@ -37,3 +37,13 @@ def randomSplitIntoDays(L):
         resultList.append(newSubList)
     return resultList
 
+def addItin(d1, d2, d3, L, key):
+    if len(L) == 1:
+        d1[key] = L[0]
+    elif len(L) == 2:
+        d1[key] = L[0]
+        d2[key] = L[1]
+    else:
+        d1[key] = L[0]
+        d2[key] = L[1]
+        d3[key] = L[2]
