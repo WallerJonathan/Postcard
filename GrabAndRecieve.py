@@ -1,5 +1,7 @@
 import requests
 import json
+from flask import Flask, request
+from flask_cors import CORS, cross_origin
 
 # Gets the info from the page
 # PRECONDITION: Nothing
@@ -30,6 +32,21 @@ def sendInfo(data):
     response = requests.post(url = "https://postcard-navy.vercel.app/api/survey", json={'key':data})
     returnedInfo = response.json()
     print(returnedInfo)
+
+
+
+app = Flask("https://jwaller.pythonanywhere.com/")
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+@app.route("/", methods=['POST'])
+@cross_origin()
+def api():
+    recieved = request.get_json()
+    #newData = 
+    return "hello"
+
+api()
 
 #print(getInfo())
 #sendInfo("nuuu")
