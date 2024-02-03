@@ -8,7 +8,7 @@
       {
         "questionId": 1,
         "text": "Choose your preferred accommodations:",
-        "answer": ["Luxury", "Villa"]
+        "answer": ["Hotle", "Villa"]
       },
       {
         "questionId": 2,
